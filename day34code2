@@ -1,0 +1,122 @@
+PREPARENEW
+CERTIFY
+COMPETE
+ E2004_25 
+All Contests 
+ CSE310_Week7_Day1_SEEE 
+ Week7_Day1_Question2
+Week7_Day1_Question2locked
+Problem
+Submissions
+Leaderboard
+Discussions
+Submitted 2 months ago • Score: 2.50
+
+Status: Wrong Answer
+ Test Case #0
+ Test Case #1
+ Test Case #2
+
+Submitted CodeLanguage: Java 7
+
+ Open in editor
+1
+ import java.util.Scanner;
+
+2
+
+
+3
+public class NthOccurrence {
+
+4
+    public static void main(String[] args) {
+
+5
+        Scanner scanner = new Scanner(System.in);
+
+6
+        String paragraph = scanner.nextLine();
+
+7
+        String[] query = scanner.nextLine().split(" ");
+
+8
+        String word = query[0];
+
+9
+        int n = Integer.parseInt(query[1]);
+
+10
+        
+
+11
+        if (n <= 0) {
+
+12
+            System.out.println("Incorrect Input");
+
+13
+            return;
+
+14
+        }
+
+15
+        
+
+16
+        int count = 0;
+
+17
+        int index = 0;
+
+18
+        while ((index = paragraph.indexOf(word, index)) != -1) {
+
+19
+            count++;
+
+20
+            if (count == n) {
+
+21
+                System.out.println(index);
+
+22
+                return;
+
+23
+            }
+
+24
+            index += word.length();
+
+25
+        }
+
+26
+        
+
+27
+        if (count == 0) {
+
+28
+            System.out.println("Not Present");
+
+29
+        } else {
+
+30
+            System.out.println(index - word.length());
+
+31
+        }
+
+32
+    }
+
+33
+}
+
+Interview Prep | Blog | Scoring | Environment | FAQ | About Us | Support | Careers | Terms Of Service | Privacy Policy |
