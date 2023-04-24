@@ -1,0 +1,14 @@
+import java.io.*;
+import java.util.Scanner;
+public class Solution { 
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        int i=sc.nextInt();
+        int inter=i/10;
+        int total=i+inter;
+        float em= total/12;
+        float emi1=em+0.33f;
+        System.out.println(total);
+        System.out.print(String.format("%.2f",emi1));
+    }
+}
