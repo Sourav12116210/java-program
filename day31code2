@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class TreeSorting {
+public static void main(String[] args) {
+Scanner scanner = new Scanner(System.in);
+int[] trees = new int[10];
+
+// Input the heights of trees
+for (int i = 0; i < 10; i++) {
+trees[i] = scanner.nextInt();
+}
+
+// Sort the trees using bubble sort algorithm
+for (int i = 0; i < 9; i++) {
+boolean swapped = false;
+for (int j = 0; j < 9 - i; j++) {
+if (trees[j] > trees[j + 1]) {
+// Swap the adjacent trees
+int temp = trees[j];
+trees[j] = trees[j + 1];
+trees[j + 1] = temp;
+swapped = true;
+}
+}
+// If no swaps were made, the array is already sorted
+if (!swapped) {
+break;
+}
+}
+
+// Print the sorted trees
+for (int i = 0; i < 10; i++) {
+System.out.print(trees[i] + " ");
+}
+}
+}
