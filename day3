@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+class Main
+{
+public static void main(String[] args)
+{
+Scanner obj=new Scanner(System.in);
+String value= obj.nextLine();
+
+System.out.println(value.charAt(0));
+
+
+}
+}
